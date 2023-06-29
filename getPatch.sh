@@ -14,7 +14,8 @@ mkdir -p ../tmppppp
 cd ../tmppppp
 git init
 
-cp -R $dir/* .
+# Copy the contents of the directory from the argument to the 'tmppppp' directory, excluding the 'tmp' directory
+find $dir -mindepth 1 -maxdepth 1 ! -name 'tmp' -exec cp -R {} . \;
 
 git add .
 

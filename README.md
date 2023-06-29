@@ -1,6 +1,6 @@
 # Git Patch Creation Script
 
-This bash script takes a directory path as an argument, creates a Git patch from the content of the directory, and copies it to your clipboard.
+This bash script takes a directory path as an argument, creates a Git patch from the content of the directory (excluding the 'tmp' folder), and copies it to your clipboard.
 
 ## Usage
 
