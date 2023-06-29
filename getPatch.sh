@@ -14,8 +14,8 @@ mkdir -p ../tmppppp
 cd ../tmppppp
 git init
 
-# Copy the contents of the directory from the argument to the 'tmppppp' directory, excluding the 'tmp' directory
-find $dir -mindepth 1 -maxdepth 1 ! -name 'tmp' -exec cp -R {} . \;
+# Copy the contents of the directory from the argument to the 'tmppppp' directory, excluding the 'tmp', '.ide', and '.git' directories
+rsync -av --exclude='tmp' --exclude='.ide' --exclude='.git' "$dir/" .
 
 git add .
 
